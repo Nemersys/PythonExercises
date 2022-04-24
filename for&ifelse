@@ -1,0 +1,17 @@
+inicio, fim = map(int,input().split())
+
+cont = 0
+
+if fim>inicio:
+    for i in range(inicio,fim):
+     cont += 1
+    print(f"O JOGO DUROU {cont} HORA(S)")
+
+elif inicio>fim:
+     for i in range(inicio,24):
+       cont +=1
+     cont +=fim
+     print(f"O JOGO DUROU {cont} HORA(S)")
+
+elif inicio==fim:
+     print("O JOGO DUROU 24 HORA(S)")
