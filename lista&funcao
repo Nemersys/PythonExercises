@@ -1,0 +1,52 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+lista = [rock, paper, scissors]
+tamanhoLista = len(lista)
+
+escolha = int(input())
+jogador = lista[escolha]
+npc = lista[random.randint(0, tamanhoLista - 1)]
+
+#ou npc = lista[random.randint(0, 2)]
+
+if jogador == npc:
+    print("npc:", npc)
+    print("jogador:", jogador)
+    print("empate")
+    
+elif jogador == rock and npc == paper or jogador == paper and npc == scissors or jogador == scissors and npc == rock:
+    print("npc:", npc)
+    print("jogador:", jogador)
+    print("jogador perdeu")
+    
+elif npc == rock and jogador == paper or npc == paper and jogador == scissors or npc == scissors and jogador == paper:
+    print("npc:", npc)
+    print("jogador:", jogador)
+    print("jogador ganhou")
