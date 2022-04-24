@@ -1,0 +1,27 @@
+tipo = input()
+tipo2 = input()
+dieta = input()
+
+if tipo == "vertebrado":
+    if tipo2 == "ave":
+        if dieta == "carnivoro":
+            print("aguia")
+        else:
+            print("pomba")
+    else:
+        if dieta == "onivoro":
+            print("homem")
+        else:
+            print("vaca")
+
+else:
+    if tipo2 == "inseto":
+        if dieta == "hematofago":
+            print("pulga")
+        else:
+            print("lagarta")
+    else:
+        if dieta == "hematofago":
+            print("sanguessuga")
+        else:
+            print("minhoca")
