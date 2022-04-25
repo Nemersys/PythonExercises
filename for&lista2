@@ -1,0 +1,10 @@
+numeros = input().split()
+for n in range(0, len(numeros)):
+  numeros[n] = int(numeros[n])
+print(numeros)
+
+maior = 0
+for n in numeros:
+    if n > maior:
+        maior = n
+print(maior)
