@@ -1,0 +1,15 @@
+pesos = input().split()
+for n in range(0, len(pesos)):
+  pesos[n] = int(pesos[n])
+  
+pesoTotal = 0
+for kg in pesos:
+    pesoTotal += kg
+
+estudantesTotal = 0
+for estudantes in pesos:
+    estudantesTotal +=1
+    
+media = pesoTotal/estudantesTotal
+
+print(f"media = {media}")
