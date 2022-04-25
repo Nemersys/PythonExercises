@@ -1,0 +1,20 @@
+N = int(input())
+banknotes = [100, 50, 20, 10, 5, 2, 1]
+
+if 0 < N < 1000000:
+    n100 = int(N / banknotes[0])
+    n50 = int((N - n100 * banknotes[0]) / banknotes[1])
+    n20 = int((N - n50 * banknotes[1] - n100 * banknotes[0]) / banknotes[2])
+    n10 = int((N - n50 * banknotes[1] - n100 * banknotes[0] - n20 * banknotes[2]) / banknotes[3])
+    t1 = (N - n50 * banknotes[1] - n100 * banknotes[0] - n20 * banknotes[2] - n10 * banknotes[3])
+    n5 = int(t1 / banknotes[4])
+    n2 = int((t1 - n5*banknotes[4]) / banknotes[5])
+    n1 = int((t1 - n5*banknotes[4] - n2*banknotes[5]) / banknotes[6])
+    print(N)
+    print("{} nota(s) de R$ 100,00".format(n100))
+    print("{} nota(s) de R$ 50,00".format(n50))
+    print("{} nota(s) de R$ 20,00".format(n20))
+    print("{} nota(s) de R$ 10,00".format(n10))
+    print("{} nota(s) de R$ 5,00".format(n5))
+    print("{} nota(s) de R$ 2,00".format(n2))
+    print("{} nota(s) de R$ 1,00".format(n1), end="\n")
