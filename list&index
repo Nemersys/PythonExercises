@@ -1,0 +1,27 @@
+meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
+vendas_1sem = [25000, 49052, 22200, 17750, 15870, 19900]
+vendas_2sem = [19850, 20120, 17540, 15555, 49051, 9650]
+
+vendas_1sem.extend(vendas_2sem)
+
+vendas_ano = vendas_1sem
+
+maior = 0
+
+for i in vendas_ano:
+    if i>maior:
+       maior = i
+
+maior_index = True
+posicao = 0
+if maior_index:
+   for i in vendas_ano:
+      if i != maior:
+         posicao += 1
+      elif i == maior:
+           maior_index = False
+           
+           maior_mes = meses[posicao]
+           vendas = vendas_ano[posicao]
+
+           print(f"o melhor mês do ano foi {maior_mes}, com {vendas} vendas.")
